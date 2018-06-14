@@ -1,5 +1,5 @@
 ## Test One
-```cd TestOne```
+```cd testOne```
 
 ```npm install```
 
@@ -7,7 +7,7 @@
 
 
 ## Test Two
-```cd TestTwo```
+```cd testTwo```
 
 ```npm install```
 
@@ -15,7 +15,7 @@
 
 
 ## Test Three
-```cd TestThree```
+```cd testThree```
 
 ```npm install```
 
