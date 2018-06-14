@@ -1,11 +1,22 @@
-## cd TestOne
-npm install
-npm start
+## Test One
+```cd TestOne```
 
-## cd TestTwo
-npm install
-npm start
+```npm install```
 
-## cd TestThree
-npm install
-npm start
+```npm start```
+
+
+## Test Two
+```cd TestTwo```
+
+```npm install```
+
+```npm start```
+
+
+## Test Three
+```cd TestThree```
+
+```npm install```
+
+```npm start```
