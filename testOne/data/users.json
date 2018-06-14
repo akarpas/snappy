@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "Username": "user1",
+      "Id": "0001",
+      "Email": "andreas@fake.com",
+      "firstName": "Andreas",
+      "lastName": "Karpasitis"
+    },
+    {
+      "Username": "user2",
+      "Id": "0002",
+      "Email": "bill@fake.com",
+      "firstName": "Bill",
+      "lastName": "Gates"
+    },
+    {
+      "Username": "user3",
+      "Id": "0003",
+      "Email": "steve@fake.com",
+      "firstName": "Steve",
+      "lastName": "Jobs"
+    },
+    {
+      "Username": "user4",
+      "Id": "0004",
+      "Email": "richard@fake.com",
+      "firstName": "Richard",
+      "lastName": "Branson"
+    },
+    {
+      "Username": "user5",
+      "Id": "0005",
+      "Email": "steven@fake.com",
+      "firstName": "Steven",
+      "lastName": "Spielberg"
+    },
+    {
+      "Username": "user6",
+      "Id": "0006",
+      "Email": "quentin@fake.com",
+      "firstName": "Quentin",
+      "lastName": "Tarantino"
+    }
+  ]
+}
+  
