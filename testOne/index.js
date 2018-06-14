@@ -19,12 +19,11 @@ const usersFiltered = _(users).map(item => {
 console.log("Available users: \n", usersFiltered)
 
 query.ask(async (input) => {
-  const userIds = input.split(" ")
-  const selectedUsers = await usersSearch.getUserById(users, userIds)
+  const selectedUsers = await usersSearch.getUserById(users, input.split(" "))
 
   selectedUsers.forEach(async user => {
     const emailResponse = await email.sendEmail(user)
-    const emailStatus = emailResponse === '200' ? 'SUCCESS' : 'FAILURE'
+    const emailStatus = emailResponse === "200" ? "SUCCESS" : "FAILURE"
     console.log(
       `
       -------------------------------------------------------
