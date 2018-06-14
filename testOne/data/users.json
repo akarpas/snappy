@@ -41,6 +41,20 @@
       "Email": "quentin@real.com",
       "firstName": "Quentin",
       "lastName": "Tarantino"
+    },
+    {
+      "Username": "user7",
+      "Id": "0007",
+      "Email": "almodovar@real.com",
+      "firstName": "Pedro",
+      "lastName": "Almodovar"
+    },
+    {
+      "Username": "user8",
+      "Id": "0008",
+      "Email": "bruce@wayne.com",
+      "firstName": "Bruce",
+      "lastName": "Wayne"
     }
   ]
 }
