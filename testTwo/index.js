@@ -1,4 +1,3 @@
-const testString = "this is a test string"
 const Input = require("prompt-input")
 
 String.prototype.getIndex = function (searchValue, fromIndex) {
