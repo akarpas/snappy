@@ -1,5 +1,6 @@
 const users = require("./data/users.json")["users"]
 const usersSearch = require("./utils/users.js")
+const email = require("./utils/email.js")
 const Input = require("prompt-input")
 const _ = require("lodash")
 
@@ -19,12 +20,18 @@ console.log("Available users: \n", usersFiltered)
 
 query.ask(async (input) => {
   const userIds = input.split(" ")
-  const result = await usersSearch.filter(users, userIds)
-  console.log("----------------------------")
-  result.forEach((item, index) => {
+  const selectedUsers = await usersSearch.getUserById(users, userIds)
+
+  selectedUsers.forEach(async user => {
+    const emailResponse = await email.sendEmail(user)
+    const emailStatus = emailResponse === '200' ? 'SUCCESS' : 'FAILURE'
     console.log(
-      `(x) - An email has been sent to ${item.firstName} ${item.lastName} with email: ${item.Email}...`
+      `
+      -------------------------------------------------------
+      - STATUS of Email to ${user.firstName} ${user.lastName} 
+      with email ${user.Email}: ${emailStatus}
+      -------------------------------------------------------
+      `
     )
   })
-  console.log("----------------------------")
 })
