@@ -4,7 +4,7 @@ String.prototype.getIndex = function (searchValue, fromIndex) {
 
   const inputArray = input.split('')
 
-  let results = []
+  const results = []
   inputArray.forEach((char, index) => {
     if (index < startIndex) {
       return
