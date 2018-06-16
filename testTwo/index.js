@@ -1,17 +1,17 @@
-const Input = require("prompt-input")
+const input = require("prompt-input")
 const getIndex = require("./utils/indexOf.js")
 
-const stringInput = new Input({
+const stringInput = new input({
   name: "stringInput",
   message: "Please enter any string: "
 })
 
-const searchValue = new Input({
+const searchValue = new input({
   name: "searchValue",
   message: "Please enter one character as a search value: "
 })
 
-const startIndex = new Input({
+const startIndex = new input({
   name: "startIndex",
   message: "Please enter a starting index: "
 })
