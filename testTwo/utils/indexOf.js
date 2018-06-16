@@ -13,10 +13,7 @@ String.prototype.getIndex = function (searchValue, fromIndex) {
       results.push(index)
     }
   })
-  return {
-    index: results.length > 0 ? results[0] : -1,
-    searchValue
-  }
+  return results.length > 0 ? results[0] : -1
 }
 
 module.exports = String.prototype.getIndex
