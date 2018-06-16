@@ -15,3 +15,10 @@ it('should start from correct index (3), ignore previous positions for b in stri
   index.should.equal(3)
   indexZero.should.equal(0)  
 })
+
+it('should start from 0 if no starting index is provided', function(){
+  const testString = 'abcabc'
+  const index = testString.getIndex('a').index
+  index.should.equal(0)
+  index.should.not.equal(3) 
+})
