@@ -20,9 +20,9 @@ stringInput.run().then(string => {
   searchValue.run().then(search => {
     startIndex.run().then(index => {
       const result = string.getIndex(search, index)
-      const status = result.index === -1 ?
-      `does not contain the letter ${result.searchValue}` :
-      `contains the letter ${result.searchValue} at index ${result.index}`
+      const status = result === -1 ?
+      `does not contain the letter ${search}` :
+      `contains the letter ${search} at index ${result}`
       
       console.log(`* ${string} * ${status}`)
     })
