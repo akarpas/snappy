@@ -6,22 +6,22 @@ const pendingCalls = []
 
 const distanceHandler = (p1, p2, cb) => {  
   if (currentCalls.length >= MAX_PARALLEL_CALLS) {
-      pendingCalls.push({ p1, p2, cb })
+    pendingCalls.push({ p1, p2, cb })
   } else {
-      currentCalls.push({ p1, p2, cb })
-      calculateDistance()
+    currentCalls.push({ p1, p2, cb })
+    calculateDistance()
   }
 }
 
 const calculateDistance = () => {
   setTimeout(() => {
-      const current = currentCalls.shift()
-      const { p1, p2, cb } = current
-      cb(p2 - p1)
-      if (pendingCalls.length) {
-          const next = pendingCalls.shift()
-          distanceHandler(next.p1, next.p2, next.cb)
-      }
+    const current = currentCalls.shift()
+    const { p1, p2, cb } = current
+    cb(p2 - p1)
+    if (pendingCalls.length) {
+      const next = pendingCalls.shift()
+      distanceHandler(next.p1, next.p2, next.cb)
+    }
   }, 1500);
 }
 
