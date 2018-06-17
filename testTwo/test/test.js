@@ -16,6 +16,7 @@ describe('The indexOf function', function() {
         const index = testString.getIndex('b', 3)
         const indexZero = testString.getIndex('b', 0)
         index.should.equal(3)
+        index.should.not.equal(0)
         indexZero.should.equal(0)  
       }
   )
