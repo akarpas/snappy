@@ -14,6 +14,8 @@
 
 ```npm install```
 
+```npm test```
+
 ```npm start```
 
 
@@ -23,5 +25,3 @@
 ```npm install```
 
 ```npm start```
-
-```npm test```
