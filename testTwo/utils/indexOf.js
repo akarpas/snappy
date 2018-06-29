@@ -1,19 +1,27 @@
 String.prototype.getIndex = function (searchValue, fromIndex) {
-  const input = this.valueOf()
-  const startIndex = fromIndex ? fromIndex : 0
+  const input = String(this.valueOf())
 
-  const inputArray = input.split('')
+  if (searchValue.length > input.length) {
+    return -1
+  }
 
-  const results = []
-  inputArray.forEach((char, index) => {
-    if (index < startIndex) {
-      return
+  const startIndex = fromIndex < 0 || !fromIndex ? 0 : fromIndex
+  const length = searchValue.length
+
+  const characters = String(searchValue).split('')
+
+  for (let x = startIndex; x < input.length; x++) {
+    if (characters[0] === input[x]) {
+      let parts = ''
+      for (let y = 0; y < length; y++) {
+        parts += input[x + y]
+      }
+      if (parts === searchValue) {
+        return x
+      }
+      return -1
     }
-    if (char === searchValue) {
-      results.push(index)
-    }
-  })
-  return results.length > 0 ? results[0] : -1
-}
+  }
+} 
 
 module.exports = String.prototype.getIndex

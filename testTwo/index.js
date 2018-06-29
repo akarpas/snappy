@@ -25,7 +25,7 @@ stringInput.run().then(string => {
       const status = result === undefined ? 'no string provided' : (
         result === -1 ?
         `does not contain the letter ${search}` :
-        `contains the letter ${search} at index ${result}`
+        `contains the character '${search}' at index ${result}`
       )
       
       console.log(`* ${string} * ${status}`)
