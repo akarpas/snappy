@@ -21,10 +21,22 @@ describe('The indexOf function', function() {
       }
   )
 
-  it(`should start from 0 if no starting index is provided`, function(){
+  it(`should start from 0 if no starting index is provided`, function() {
     const testString = 'abcabc'
     const index = testString.getIndex('a')
     index.should.equal(0)
     index.should.not.equal(3) 
+  })
+
+  it(`should handle strings longer than length 1`, function() {
+    const testString = 'abcabca'
+    const index = testString.getIndex('ca')
+    index.should.equal(2)
+  })
+
+  it(`should be case sensitive`, function() {
+    const testString = 'aBcabca'
+    const index = testString.getIndex('b')
+    index.should.equal(4)
   })
 })
